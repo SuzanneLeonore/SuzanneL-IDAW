@@ -1,12 +1,6 @@
-<!DOCTYPE html>
-<html>
-    <head> 
-        <title>Mon CV</title>
-        <meta charset ="utf-8">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
+<?php
+require_once('template_header.php');
+?>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
         <header>
             <h1>Mon parcours professionel
@@ -16,13 +10,9 @@
         </header>
         <div class="conteneur-flexible ligne">
             <div class="element-flexible menu">
-                <nav class="menu"></nav>
-                    <ul>
-                        <li><a href="index.html">Accueil</a></li>
-                        <li><a href="hobbies.html">Hobbies</a></li>
-                        <li><a id="pageActuelle" href="cv.html">CV</a></li>
-                    </ul>
-                </nav>
+            <?php 
+                require_once('template_menu.php');
+            ?>
             </div>
             <div class="element-flexible contenu">
                     <header>
@@ -51,7 +41,6 @@
         </div>
         
         <br>
-    </body>
-
-    
-</html>
+<?php
+    require_once('template_footer.php');
+?>
