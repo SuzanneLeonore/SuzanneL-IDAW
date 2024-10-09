@@ -4,19 +4,24 @@
         $mymenu=array(
             'index'=>array('Accueil'),
             'cv' => array('CV'),
-            'hobbies' => array('Hobbies')
+            'hobbies' => array('Hobbies'),
+            'contact' =>array('Contact'),
         );
-        echo '<nav class="menu">
-                <ul>';
+        echo '<div class="conteneur-flexible">
+                <div class="element-flexible">
+                    <nav class="menu">
+                        <ul>';
         foreach( $mymenu as $pageId=>$pageParameters){
            if ($currentPage==$pageId){
-                echo '<li><a id="pageActuelle" href='.$pageId.'.PHP>'.$pageParameters[0].'</a></li>';
+                echo '<li><a id="pageActuelle" href=index.php?page='.$pageId.'>'.$pageParameters[0].'</a></li>';
             }
             else{
-                echo '<li><a href='.$pageId.'.PHP">'.$pageParameters[0].'</a></li>';
+                echo '<li><a href=index.php?page='.$pageId.'>'.$pageParameters[0].'</a></li>';
             }
         }
         echo '</ul>
-        </nav>';
+            </nav>
+            </div>
+            </div>';
     }
 ?>

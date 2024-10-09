@@ -1,29 +1,18 @@
 <?php
 require_once("template_header.php");
 require_once("template_menu.php");
-$currentPageId = 'accueil';
+$currentPageId = 'page';
 if(isset($_GET['page'])) {
     $currentPageId = $_GET['page'];
 }
+$_GET['lang']
 
 ?>
-       <header>
-            <h1> Ma page professionelle </h1>
-            <p style="text-align: center";>Bievenue dans mon site
-                <br> Bonne lecture
-            </p>
-        </header>
-        <br>
-        <div class="conteneur-flexible">
-            <div class="element-flexible">
-                <?php
-                renderMenuToHTML('index');
-                ?>
-            </div>
-            <div class="element-flexible">
-                <p>Bienvenue sur la page d acceuil</p>
-            </div>
-        </div>
+       
+<?php
+    renderMenuToHTML($currentPageId);
+?>
+
     <section class="corps">
         <?php
             $pageToInclude = $currentPageId.".php";
