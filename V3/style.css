@@ -1,0 +1,79 @@
+h1{
+    color: rgb(99, 12, 229);
+    text-align: center;
+    font-size: 50px;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+h2{
+    color:black;
+    margin-right: 15px;
+    font-size: 30px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+h3{
+    color: black;
+    margin-left: 15px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+body{
+    background-image: "https://img.freepik.com/photos-premium/papier-peint-fleurs-marron-antique-encadre-fond-kitsch-vintage_449839-3995.jpg";
+    background-image: cover;
+} 
+
+#pageActuelle{
+    color: brown;
+}
+
+.conteneur-ligne{
+    display:inline
+}
+
+
+.conteneur-flexible{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start ;
+    align-content: start;
+    background-color: rgb(255, 255, 255); /*Bleu*/
+    width: 100%;
+    height: 200px;
+    border: 2px solid rgb(255, 255, 255);
+    box-sizing: border-box;
+    margin: 20px 0px;
+}
+.ligne{
+    flex-direction: row; /*Axe principal = axe horizontal*/
+}
+.colonne{
+    flex-direction: column; /*Axe principal = axe vertical*/
+}
+
+.element-flexible{
+    background-color: rgb(255, 255, 255); /*Vert*/
+    
+}
+
+.menu {
+    flex : 1 1 10px;
+    width: 20%;
+    height: 10%;
+    border: 0px solid green;
+    box-sizing: border-box;
+    margin: 10px;
+}
+
+.contenu {
+    flex : 1 1 900px;
+    width: 100%;
+    height: 50%;
+    border: 0px solid green;
+    box-sizing: border-box;
+    margin: 10px;
+}

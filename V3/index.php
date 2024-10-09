@@ -1,7 +1,13 @@
 <?php
-require_once('template_header.php');
+require_once("template_header.php");
+require_once("template_menu.php");
+$currentPageId = 'accueil';
+if(isset($_GET['page'])) {
+    $currentPageId = $_GET['page'];
+}
+
 ?>
-        <header>
+       <header>
             <h1> Ma page professionelle </h1>
             <p style="text-align: center";>Bievenue dans mon site
                 <br> Bonne lecture
@@ -10,8 +16,7 @@ require_once('template_header.php');
         <br>
         <div class="conteneur-flexible">
             <div class="element-flexible">
-                <?php 
-                require_once('template_menu.php');
+                <?php
                 renderMenuToHTML('index');
                 ?>
             </div>
@@ -19,7 +24,15 @@ require_once('template_header.php');
                 <p>Bienvenue sur la page d acceuil</p>
             </div>
         </div>
-        <p>Coucou</p>
+    <section class="corps">
+        <?php
+            $pageToInclude = $currentPageId.".php";
+            if(is_readable($pageToInclude))
+                require_once($pageToInclude);
+            else
+                require_once("error.php");
+        ?>
+    </section>
         
 <?php 
     require_once('template_footer.php');
