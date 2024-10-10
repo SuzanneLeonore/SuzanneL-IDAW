@@ -1,11 +1,8 @@
-<header>
-    <h1>My Career path
-        <br>
-        <br>
-    </h1>
-</header>
+<div class="photo">
+    <img src="https://www.courrierdesmaires.fr/mediatheque/7/3/9/000015937_600x400_c.jpg" alt="photo carrière" width=70% height=70% style="margin-left: 10px;">
+</div>
 
-<div class="element-flexible contenu">
+<div class="contenu">
     <header>
         <h2>Education</h2>
     </header>
