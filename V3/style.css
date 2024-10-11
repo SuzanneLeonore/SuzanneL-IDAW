@@ -40,11 +40,11 @@ body {
     grid-template-areas: 
         "header header photo"
         "menu contenu contenu"
-        "contact contenu contenu"
+        "espace contenu contenu"
         "footer footer footer";
     grid-template-columns: auto 2fr 1fr;
-    grid-template-rows: auto 1fr 1fr auto;
-    height: 100vh;
+    grid-template-rows: auto auto 1fr auto;
+    height: 100%;
     gap: 10px; /* Espace entre les éléments */
     padding: 10px;
 }
@@ -72,6 +72,12 @@ body {
     padding: 10px;
     text-align: center;
     place-items: center;
+}
+
+.espace{
+    grid-area: espace;
+    background-color: white;
+    padding: 10px;
 }
 
 .contenu {

@@ -1,4 +1,7 @@
 
+<div class="photo">
+        <img src="https://i.pinimg.com/474x/81/45/bd/8145bd48b6b0593d01d69d499d2a1f8f.jpg" alt="telephon" height=100px style="margin-left: 10px;"> 
+    </div>
 <div class="contenu">
     <header>
         <h2>Mes contact details</h2>
@@ -27,3 +30,5 @@
             <br> Mycountry
         </p2>
 </div>
+<div class="espace">    
+    </div>
