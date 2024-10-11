@@ -51,8 +51,9 @@ body {
 
 .header {
     grid-area: header;
-    background-color: rgba(53, 50, 244, 0.397);
-    color: blue;
+    background-color: rgba(201, 117, 193, 0.397);
+    border-radius: 15px;
+    color: rgb(156, 7, 7);
     font-style: italic;
     font-weight: bold;
     text-align: left;
@@ -62,7 +63,7 @@ body {
 
 .menu {
     grid-area: menu;
-    background-color: lightcoral;
+    background-color: rgb(255, 255, 255);
     padding: 10px;
 }
 
@@ -82,13 +83,14 @@ body {
 
 .contenu {
     grid-area: contenu;
-    background-color: lightblue;
+    background-color: rgb(255, 255, 255);
     padding: 10px;
 }
 
 .footer {
     grid-area: footer;
     background-color: lightgray;
+    border-radius: 15px;
     text-align: left;
     padding: 10px;
 }
