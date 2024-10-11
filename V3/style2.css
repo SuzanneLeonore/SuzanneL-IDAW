@@ -1,0 +1,97 @@
+h1{
+    color: rgb(99, 12, 229);
+    text-align: center;
+    font-size: 50px;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+h2{
+    color:black;
+    margin-right: 15px;
+    font-size: 30px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+h3{
+    color: black;
+    margin-left: 15px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#pageActuelle{
+    color: brown;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-areas: 
+        "header header photo"
+        "menu contenu contenu"
+        "espace contenu contenu"
+        "footer footer footer";
+    grid-template-columns: auto 2fr 1fr;
+    grid-template-rows: auto auto 1fr auto;
+    height: 100%;
+    gap: 10px; /* Espace entre les éléments */
+    padding: 10px;
+}
+
+.header {
+    grid-area: header;
+    background-color: rgba(28, 25, 187, 0.397);
+    border-radius: 15px;
+    color: rgb(67, 7, 156);
+    font-style: italic;
+    font-weight: bold;
+    text-align: left;
+    font-size: 50px;
+    padding: 20px;
+}
+
+.menu {
+    grid-area: menu;
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+}
+
+.photo {
+    grid-area: photo;
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    text-align: center;
+    place-items: center;
+}
+
+.espace{
+    grid-area: espace;
+    background-color: white;
+    padding: 10px;
+}
+
+.contenu {
+    grid-area: contenu;
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: lightgray;
+    border-radius: 15px;
+    text-align: left;
+    padding: 10px;
+}
+

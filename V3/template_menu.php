@@ -1,6 +1,6 @@
 
 <?php
-    function renderMenuToHTML($currentPage,$lang){
+    function renderMenuToHTML($currentPage,$lang,$style){
         $mymenu=array(
             'accueil'=>array('Accueil'),
             'cv' => array('CV'),
@@ -17,17 +17,17 @@
         foreach($mymenu as $pageId=>$pageParameters){
            if ($currentPage==$pageId){
                 
-                echo '<li><a id="pageActuelle" href=index.php?page='.$pageId.'&lang='.$lang.'>'.$pageParameters[0].'></a></li>';
+                echo '<li><a id="pageActuelle" href="index.php?page='.$pageId.'&lang='.$lang.'&style='.$style.'">'.$pageParameters[0].'</a></li>';
                 if($lang=='fr'){
-                    echo '<a href="index.php?page='.$pageId.'&lang=en">Anglais</a>';
+                    echo '<a href="index.php?page='.$pageId.'&lang=en&style='.$style.'">Anglais</a>';
                 }
                 else{
-                    echo '<a href="index.php?page='.$pageId.'&lang=fr">Français</a>';
+                    echo '<a href="index.php?page='.$pageId.'&lang=fr&style='.$style.'">Français</a>';
                 }
 
             }
             else{
-                echo '<li><a href=index.php?page='.$pageId.'&lang='.$lang.'>'.$pageParameters[0].'</a></li>';
+                echo '<li><a href=index.php?page='.$pageId.'&lang='.$lang.'&style='.$style.'">'.$pageParameters[0].'</a></li>';
             }
         }
         echo '</ul>

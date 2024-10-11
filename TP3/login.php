@@ -2,7 +2,8 @@
     $login;
     $password;
 ?>
-<form id="login_form" action="connected.php" method="GET">
+
+<form id="login_form" action="connectedPOST.php" method="POST">
     <table>
         <tr>
             <th>Login :</th>
