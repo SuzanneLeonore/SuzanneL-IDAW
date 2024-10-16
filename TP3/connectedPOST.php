@@ -25,6 +25,8 @@ if(!$successfullyLogged) {
     echo $errorText;
 } 
 else {
-    echo "<h1>Bienvenu ".$login."</h1>";
-}
+    $_SESSION["log"] = $login;
+    $_SESSION["Pwd"] = $tryPwd;
+    header('location : index.php');
+    }
 ?>

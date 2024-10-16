@@ -23,6 +23,9 @@ if(isset($_GET['login']) && isset($_GET['password'])) {
 if(!$successfullyLogged) {
     echo $errorText;
 } else {
+    $_SESSION["log"] = $login;
+    $_SESSION["Pwd"] = $tryPwd;
+    header('location : index.php');
     echo "<h1>Bienvenu ".$login."</h1>";
 }
 ?>

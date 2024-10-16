@@ -16,7 +16,6 @@
                     <ul>';
         foreach($mymenu as $pageId=>$pageParameters){
            if ($currentPage==$pageId){
-                
                 echo '<li><a id="pageActuelle" href="index.php?page='.$pageId.'&lang='.$lang.'&style='.$style.'">'.$pageParameters[0].'</a></li>';
                 if($lang=='fr'){
                     echo '<a href="index.php?page='.$pageId.'&lang=en&style='.$style.'">Anglais</a>';
