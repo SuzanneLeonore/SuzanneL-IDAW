@@ -1,0 +1,13 @@
+<?php
+
+require_once('init_pdo.php');
+
+function insertion($val1, $val2,$db){
+    $stmt = $db->prepare("INSERT INTO REGISTRY (name, email)
+VALUES ($val1, $val2)");
+    $stmt->bindParam(':name', $_POST['name']);
+    $stmt->bindParam(':email', $_POST['email']);
+    $val1 = 'name';
+    $val2 = 'email';
+    $stmt->execute();
+}
