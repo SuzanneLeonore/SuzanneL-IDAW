@@ -1,7 +1,5 @@
 <?php
-require_once('init_pdo.php');
-require_once('Insertion');
-
+require_once('insertion.php');
 
 $sql = 'SELECT name, email FROM User WHERE name = :name AND email = :email';
 $stmt = $pdo->prepare($sql);
@@ -18,7 +16,7 @@ if($result >0){
     <br> Veuillez changer de nom ou d\'email';
 }
 else{
-    insertion('name','email',$pdo);
+    insertion($_POST['name'],$_POST['email'],$pdo);
     header('location:user.php');
 }
 

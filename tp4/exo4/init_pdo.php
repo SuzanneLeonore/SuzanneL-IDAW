@@ -16,7 +16,4 @@
         catch (PDOException $erreur) {
             echo 'Erreur : '.$erreur->getMessage();
         }
-        $sql = 'select id, name, email from User';
-        $request = $pdo->prepare($sql);
-        $a = $pdo->query($sql);
-        $data = $a->fetch(PDO::FETCH_OBJ);
+        

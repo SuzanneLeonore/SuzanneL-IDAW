@@ -2,6 +2,12 @@
 <?php
     require_once('config.php');
     require_once('init_pdo.php');
+    require_once('fonction.php');
+
+    $sql = 'select id, name, email from User';
+    $request = $pdo->prepare($sql);
+    $a = $pdo->query($sql);
+    $data = $a->fetch(PDO::FETCH_OBJ);
 
 echo '<h1>Users</h1>
 <table style="marging=15px;">
@@ -15,13 +21,16 @@ echo '<h1>Users</h1>
         </tr>
     </thead>
     <tbody>';
+    
 while(!empty($data)) {
     echo '<tr>
         <td>'.$data->id.'</td>
         <td>'.$data->name.'</td> 
         <td>'.$data->email.'</td>
-        <td><input type="button", value="modifier", onclick="windows.location.href=modifier.php">
-        <input type="button", value="Suprimer", onclick="windows.location.href="suprimer.php""></td>
+        <td>
+        <button onclick="location.href=\'modifier.php?id='. $data->id.'\'" >Modifier</button>
+        <button onclick="location.href=\'suprimer.php?id='. $data->id.'\'">Suprimer</button>
+        </td>
         <tr>';
 $data = $a->fetch(PDO::FETCH_OBJ);
 }
@@ -44,6 +53,7 @@ echo'</tbody>
         </tr>
     </table>
 </form>'
+
 
 // TODO: add your code here
 // retrieve data from database using fetch(PDO::FETCH_OBJ) and
